@@ -1,4 +1,5 @@
 var t1 = gsap.timeline();
+t1.set(".letters", { zIndex: -1 });
 t1.fromTo(
   ".hero",
   1.5,
@@ -10,7 +11,7 @@ t1.fromTo(
     ease: Power2.easeInOut,
   }
 )
-  .addLabel("up")
+
   .fromTo(
     ".hero",
     1,
@@ -20,8 +21,7 @@ t1.fromTo(
     {
       width: "80%",
       ease: Power2.easeInOut,
-    },
-    "up+=0.2"
+    }
   )
   .fromTo(
     ".overlay",
@@ -55,11 +55,13 @@ t1.fromTo(
       x: "1em",
       y: "1.2em",
       rotateZ: 180,
+      zIndex: 0,
     },
     {
       x: 0,
       y: 0,
       rotateZ: 0,
+      zIndex: 2,
       ease: Power2.easeInOut,
       stagger: 0.1,
     }
