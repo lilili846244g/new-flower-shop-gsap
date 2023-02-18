@@ -1,0 +1,82 @@
+@mixin container {
+    width: 80%;
+    margin-inline: auto;
+    padding: 10px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    @include container;
+    .header-title {
+        color: #ab815d;
+        font-family: "cursive";
+        font-size: 2.8rem;
+    }
+    .sns {
+        img {
+            width: 36px;
+            height: 36px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-inline: auto;
+        .text-wrapper {
+            position: absolute;
+            top: 45%;
+            left: -5%;
+            color: #ab815d;
+            font-size: 5rem;
+            font-weight: bold;
+            mix-blend-mode: multiply;
+            overflow: hidden;
+            .letters {
+                display: inline-block;
+            }
+        }
+        img {
+            width: 100%;
+            height: 80vh;
+            margin-top: 50px;
+            object-fit: cover;
+            object-position: 0 -105px;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    z-index: -1;
+}
