@@ -146,7 +146,7 @@ body {
 
 @media (min-width: 100px) and (max-width: 899px) {
   .main .hero img {
-    height: 80vh;
+    height: 75vh;
     -o-object-position: top;
        object-position: top;
   }
