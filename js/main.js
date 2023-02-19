@@ -1,25 +1,28 @@
 var t1 = gsap.timeline();
 t1.set(".letters", { zIndex: -1 });
+
 t1.fromTo(
-  ".hero",
+  ".hero img",
   1.5,
   {
     clipPath: "inset(50% 0% 50% 0%)",
+    zIndex: 0,
   },
   {
     clipPath: "inset(0% 0% 0% 0%)",
+    zIndex: 1,
     ease: Power2.easeInOut,
   }
 )
 
   .fromTo(
-    ".hero",
+    ".hero img",
     1,
     {
-      width: "100%",
+      clipPath: "inset(0% 0% 0% 0%)",
     },
     {
-      width: "80%",
+      clipPath: "inset(0% 10% 0% 10%)",
       ease: Power2.easeInOut,
     }
   )

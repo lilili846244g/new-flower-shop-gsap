@@ -33,11 +33,30 @@ body {
   font-size: 2.8rem;
 }
 
+@media (min-width: 500px) and (max-width: 899px) {
+  .header .header-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 499px) {
+  .header .header-title {
+    font-size: 1.5rem;
+  }
+}
+
 .header .sns img {
   width: 36px;
   height: 36px;
   margin-left: 10px;
   border-radius: 5px;
+}
+
+@media (min-width: 100px) and (max-width: 499px) {
+  .header .sns img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .main {
@@ -51,23 +70,57 @@ body {
           align-items: center;
 }
 
+@media (min-width: 100px) and (max-width: 899px) {
+  .main {
+    height: 100vh;
+  }
+}
+
 .main .hero {
   position: relative;
   width: 100%;
   height: 100%;
   margin-inline: auto;
+  z-index: 1000;
 }
 
 .main .hero .text-wrapper {
   position: absolute;
   top: 45%;
-  left: -5%;
+  left: 3%;
   color: #ab815d;
   font-size: 5rem;
   font-weight: bold;
   mix-blend-mode: multiply;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 100;
+}
+
+@media (min-width: 990px) and (max-width: 1300px) {
+  .main .hero .text-wrapper {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 989px) {
+  .main .hero .text-wrapper {
+    font-size: 2.6rem;
+    top: 40%;
+  }
+}
+
+@media (min-width: 494px) and (max-width: 579px) {
+  .main .hero .text-wrapper {
+    font-size: 2rem;
+    top: 40%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 493px) {
+  .main .hero .text-wrapper {
+    font-size: 1.3rem;
+    top: 40%;
+  }
 }
 
 .main .hero .text-wrapper .letters {
@@ -76,12 +129,27 @@ body {
 
 .main .hero img {
   width: 100%;
-  height: 80vh;
-  margin-top: 50px;
+  height: 73vh;
   -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 -105px;
-     object-position: 0 -105px;
+  object-fit: cover;
+  -o-object-position: 0 -50px;
+  object-position: 0 -165px;
+  margin-top: 50px;
+}
+
+@media (min-width: 900px) and (max-width: 1300px) {
+  .main .hero img {
+    -o-object-position: 0 -70px;
+       object-position: 0 -70px;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 899px) {
+  .main .hero img {
+    height: 80vh;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 
 .overlay {
